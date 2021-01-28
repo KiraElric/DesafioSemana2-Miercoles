@@ -12,37 +12,37 @@ class Person
   end
 
   def introduce
-    "Mi nombre es #{@first_name} #{@last_name}"
+    return "Mi nombre es #{@first_name} #{@last_name}"
   end
 end
 
 class Student < Person
   def talk
-    puts "Aqui es la clase de programación de Ruby?"
+    return "Aqui es la clase de programación de Ruby?"
   end
 
   def introduce
-    puts "Hola profesor. " + super
+    return "Hola profesor. " + super
   end
 end
 
 class Teacher < Person
   def talk
-    puts "Bienvenidos a la clase de programación con Ruby"
+    return "Bienvenidos a la clase de programación con Ruby"
   end
 
   def introduce
-    puts "Hola alumnos. " + super
+    return "Hola alumnos. " + super
   end
 end
 
 class Parent < Person
   def talk
-    puts "Aqui es la reunión de apoderados?"
+    return "Aqui es la reunión de apoderados?"
   end
 
   def introduce
-    puts "Hola. Soy uno de los apoderados. " + super
+    return "Hola. Soy uno de los apoderados. " + super
   end
 end
 
@@ -50,12 +50,12 @@ person1 = Student.new("Lissette", "Urso", 27, "student")
 person2 = Teacher.new("Gustavo", "Vivallos", 30, "teacher")
 person3 = Parent.new("Marcelo", "Urso", 52, "parent")
 
-person1.introduce
-person2.introduce
-person3.introduce
+puts person1.introduce
+puts person2.introduce
+puts person3.introduce
 
 puts "\n"
 
-person1.talk
-person2.talk
-person3.talk
+puts person1.talk
+puts person2.talk
+puts person3.talk
